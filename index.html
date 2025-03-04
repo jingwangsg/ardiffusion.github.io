@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Error Analyses of Auto-Regressive Video Diffusion Models: A Unified Framework">
+  <meta name="keywords" content="AR, VDM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Error Analyses of Auto-Regressive Video Diffusion Models: A Unified Framework</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -42,53 +42,13 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Error Analyses of Auto-Regressive Video Diffusion Models: A Unified Framework</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
@@ -118,16 +78,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -157,15 +107,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -255,34 +196,16 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 style="text-align: center;", class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            A variety of Auto-Regressive Video Diffusion Models (ARVDM) have achieved remarkable successes in generating realistic long-form videos. However, theoretical analyses of these models remain scant. 
+            In this work, we develop theoretical underpinnings for these models and use our insights to improve the performance of existing models. We first develop <code>Meta-ARVDM</code>, a unified framework of 
+            ARVDMs that subsumes most existing methods. Using <code>Meta-ARVDM</code>, we analyze the KL-divergence between the videos generated by <code>Meta-ARVDM</code> and the true videos. Our analysis uncovers 
+            two important phenomena inherent to ARVDM--<em>error accumulation</em> and <em>memory bottleneck</em>. By deriving an information-theoretic impossibility result, we show that the memory bottleneck 
+            phenomenon cannot be avoided. To mitigate the  memory bottleneck, we design various network structures to explicitly use more past frames. We also achieve a significantly improved trade-off 
+            between the mitigation of the memory bottleneck and the inference efficiency by compressing the frames. Experimental results on DMLab and Minecraft validate the efficacy of our methods. 
+            Our experiments also demonstrate a Pareto-frontier between the error accumulation and memory bottleneck across different methods.
           </p>
         </div>
       </div>
@@ -292,7 +215,7 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Video Demos</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -305,138 +228,118 @@
 
 
 <section class="section">
+  <style>
+    ul.custom-list {
+        list-style: none; /* Remove default bullets */
+        padding: 0;
+    }
+    ul.custom-list li {
+        font-size: 18px;
+        background: #f8f9fa;
+        padding: 10px;
+        margin: 10px 0;
+        border-left: 5px solid #007BFF; /* Blue left border */
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    ul.custom-list li:hover {
+        background: #e3f2fd;
+    }
+  </style>
+  <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <div class="container is-max-desktop">
 
+    
+    <!--/ Matting. -->
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
+      <div class="column is-full-width">
+        <h2 style="text-align: center; color: #007BFF;", class="title is-3">Main Messages</h2>
+        <ul class="custom-list">
+          <li>Most Auto-Regressive Video Diffusion Models (ARVDMs) face <strong>memory bottleneck</strong> and <strong>error accumulation</strong>. The memory bottleneck at each AR 
+            step is defined by the <em>conditional mutual information</em> between past states and outputs, given the input. Error accumulation is the <em>cumulative sum of errors</em> from all preceding AR steps.</li>
+          <li>The memory bottleneck is <strong>inevitable</strong> but can be <strong>monotonically</strong> reduced by incorporating more historical information into the denoising process.</li>
+          <li>The memory bottleneck can be mitigated by letting the <strong>denoising network</strong> take historical frames as inputs in a proper way.</li>
+          <li>The memory bottleneck and error accumulation are <strong>correlated</strong>. Less memory bottleneck error implies more error accumulation. </li>
+        </ul>
       </div>
     </div>
-    <!--/ Matting. -->
+
 
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 style="text-align: center;", class="title is-3">Methodology Overview</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h3 class="title is-4">A Unified Framework of ARVDMs</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            We build a unified framework <code>Meta-ARVDM</code>, which includes most ARVDMs, to study the errors shared by them.
+          </p>
+          <img src="./static/images/framework.jpg" alt="Meta-ARVDM" width="1200">
+          <p>
+            We identify conditions: <span style="color: #84BD00;">Monotonicity</span>, <span style="color: #e4002b;">Circularity</span>, and <span style="color: #DA1884;">$0-T$ Boundary</span>.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h3 class="title is-4">Theoretical Analysis</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            The error of <em>long</em> videos $Y_{1:K\Delta}^{0}$ generated by  <code>Meta-ARVDM</code> can be decomposed as follows.
+            \[
+            \begin{align*}
+              \mathrm{KL}(X_{1:K\Delta}^{0}\,\|\,Y_{1:K\Delta}^{0})\lesssim \mathrm{NIE} +  \mathrm{SEE} + \mathrm{DE} + \sum_{k=1}^K  \mathrm{NIE}_{\mathrm{A}\mathrm{R}} +  \mathrm{SEE}_{\mathrm{A}\mathrm{R}} + \mathrm{DE}_{\mathrm{A}\mathrm{R}} + \mathrm{MB}_k .
+            \end{align*}
+            \]
+            It contains noise initialization errors ($\mathrm{NIE}, \mathrm{NIE}_{\mathrm{A}\mathrm{R}}$), score estimation erros ($\mathrm{SEE},\mathrm{SEE}_{\mathrm{A}\mathrm{R}}$), 
+            discretization error ($\mathrm{DE},\mathrm{DE}_{\mathrm{A}\mathrm{R}}$), and <strong>memory bottleneck</strong> ($\mathrm{MB}_k$). Here the memory bottleneck is the conditional mutual information between the past and output of an AR step conditioned on the input, i.e.,
+            \[
+            \begin{align*}
+              \mathrm{MB}_k:= I\big( \texttt{Output}_k ; \texttt{Past}_k \big|\texttt{Input}_k\big).
+            \end{align*}
+            \]
+
+            The error of <em>short</em> video clip $ Y_{K\Delta+1:(K+1)\Delta}^{0}$ is decomposed as follows.
+            \[
+            \begin{align*}
+              \mathrm{KL}\big( X_{K\Delta+1:(K+1)\Delta}^{0}\big\| Y_{K\Delta+1:(K+1)\Delta}^{0} \big)\lesssim \mathrm{I}\mathrm{E} + K\big[  \mathrm{NIE}_{\mathrm{AR}} + \mathrm{SEE}_{\mathrm{AR}}  + \mathrm{DE}_{\mathrm{AR}}  \big]
+            \end{align*}
+            \]
+            The multiplicative factor $K$ reflects the <strong>error accumulation</strong> in the video clips generated in $K$-th AR step.
           </p>
+    
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
+        
+        <h3 class="title is-4">Mitigation of Memory Bottleneck</h3>
+        <div class="content has-text-justified">
+          <p>
+            For general random variables $X,Y,Z$ and any deterministic function $g$, we have (<span style="color: #FF0000;">adding historical data helps!</span>)
+            \[
+            \begin{align*}
+              I(X;Z|Y,g(X))\leq I(X;Z|Y).
+            \end{align*}
+            \]
+            We augment the denoising networks as
+          </p>
+          <img src="./static/images/networks.jpg" alt="network structure" width="1200">
         </div>
-        <!--/ Re-rendering. -->
+
+   
 
       </div>
     </div>
     <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
+    
   </div>
 </section>
 
@@ -454,37 +357,7 @@
 </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+
 
 </body>
 </html>
