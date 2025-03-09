@@ -49,31 +49,40 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Error Analyses of Auto-Regressive Video Diffusion Models: A Unified Framework</h1>
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-4 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              Wang Jing<sup>1,2</sup>*,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              Fengzhuo Zhang<sup>3</sup>*,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              Xiaoli Li<sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              Vincent Y. F. Tan<sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              Tianyu Pang<sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              Chao Du<sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              Aixin Sun<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Zhuoran Yang<sup>5</sup>
             </span>
           </div>
+          
+          <br>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block">*Equal Contribution</span><br/>
+            <span class="author-block"><sup>1</sup>Nanyang Technological University,</span>
+            <span class="author-block"><sup>2</sup>Agency for Science, Technology and Research, Singapore,</span>
+            <span class="author-block"><sup>3</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>4</sup>Sea AI Lab,</span>
+            <span class="author-block"><sup>5</sup>Yale University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -116,7 +125,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -130,65 +139,7 @@
       </h2>
     </div>
   </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -213,7 +164,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video Demos</h2>
         <div class="publication-video">
@@ -221,11 +172,99 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
 
+
+<section class="section">
+  <h2 style="text-align: center;", class="title is-3">Error Accumulation</h2>
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fifo_1_dog_and_2_whales.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fifo_a_busy_bakery_filled_with_the_aroma_of_freshly_baked_bread_and_pastries..mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fifo_a_car_on_the_left_of_a_bus_oil_painting_style.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/outpaint_a_beautiful_mosque_stands_tall_in_the_city_center_.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/outpaint_a_big_ferris_wheel_is_rotating_in_an_amusement_park_.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mosque">
+          <video poster="" id="mosque" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/outpaint_a_cheerleader_performs_a_large_split__somersault__landing_in_a_motion.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-camping">
+          <video poster="" id="camping" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/outpaint_a_family_of_four_set_up_a_tent_and_build_a_campfire__enjoying_a_night_of_camping_under_the_stars.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="title is-3" style="text-align: center;">Memory Retrieval</h2>
+        <div class="container">
+            <!-- <h3 class="title is-4" style="text-align: left;">DMLab</h3> -->
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_007_0_16_54_76.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_017_0_309_256_288.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_017_0_328_70_102.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_019_0_311_141_175.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_020_0_312_117_152.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_020_0_315_260_295.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_043_0_10_196_254.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_044_0_301_239_298.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_047_0_341_141_203.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_049_0_332_30_94.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_060_0_302_24_99.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                    <video controls playsinline autoplay loop muted src="./static/videos/dmlab_success_060_0_338_167_242.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                </div>
+            </div>
+            <!-- <h3 class="title is-4" style="text-align: left;">Minecraft</h3>
+            <div class="col-12">
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltbuildvillagehouse_v0_20016.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltbuildvillagehouse_v0_20051.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltfindcave_v0_20089.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_21294.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_21411.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_23006.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_24346.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_25259.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_25959.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_26688.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+                <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_27547.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
+            </div> -->
+        </div>
+</section>
+
+<!-- End of Selection -->
 
 <section class="section">
   <style>
@@ -256,8 +295,6 @@
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <div class="container is-max-desktop">
-
-    
     <!--/ Matting. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
