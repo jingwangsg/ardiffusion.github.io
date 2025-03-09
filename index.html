@@ -177,8 +177,52 @@
   </div>
 </section>
 
+<!-- End of Selection -->
 
 <section class="section">
+  <style>
+    ul.custom-list {
+        list-style: none; /* Remove default bullets */
+        padding: 0;
+    }
+    ul.custom-list li {
+        font-size: 18px;
+        background: #f8f9fa;
+        padding: 10px;
+        margin: 10px 0;
+        border-left: 5px solid #007BFF; /* Blue left border */
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    ul.custom-list li:hover {
+        background: #e3f2fd;
+    }
+  </style>
+  <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <div class="container is-max-desktop">
+    <!--/ Matting. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 style="text-align: center; color: #007BFF;", class="title is-3">Main Messages</h2>
+        <ul class="custom-list">
+          <li>Most Auto-Regressive Video Diffusion Models (ARVDMs) face <strong>memory bottleneck</strong> and <strong>error accumulation</strong>. The memory bottleneck at each AR 
+            step is defined by the <em>conditional mutual information</em> between past states and outputs, given the input. Error accumulation is the <em>cumulative sum of errors</em> from all preceding AR steps.</li>
+          <li>The memory bottleneck is <strong>inevitable</strong> but can be <strong>monotonically</strong> reduced by incorporating more historical information into the denoising process.</li>
+          <li>The memory bottleneck can be mitigated by letting the <strong>denoising network</strong> take historical frames as inputs in a proper way.</li>
+          <li>The memory bottleneck and error accumulation are <strong>correlated</strong>. Less memory bottleneck error implies more error accumulation. </li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- Video Deamonstration -->
   <h2 style="text-align: center;", class="title is-3">Error Accumulation</h2>
   <div class="hero-body">
     <div class="container">
@@ -262,52 +306,8 @@
                 <video controls playsinline autoplay loop muted src="./static/videos/minecraft_success_minerlbasaltmakewaterfall_v0_27547.mp4" width="24%" style="border-radius:10px; border:1px solid black"></video>
             </div> -->
         </div>
-</section>
-
-<!-- End of Selection -->
-
-<section class="section">
-  <style>
-    ul.custom-list {
-        list-style: none; /* Remove default bullets */
-        padding: 0;
-    }
-    ul.custom-list li {
-        font-size: 18px;
-        background: #f8f9fa;
-        padding: 10px;
-        margin: 10px 0;
-        border-left: 5px solid #007BFF; /* Blue left border */
-        border-radius: 5px;
-        transition: 0.3s;
-    }
-    ul.custom-list li:hover {
-        background: #e3f2fd;
-    }
-  </style>
-  <script>
-    MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <div class="container is-max-desktop">
-    <!--/ Matting. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 style="text-align: center; color: #007BFF;", class="title is-3">Main Messages</h2>
-        <ul class="custom-list">
-          <li>Most Auto-Regressive Video Diffusion Models (ARVDMs) face <strong>memory bottleneck</strong> and <strong>error accumulation</strong>. The memory bottleneck at each AR 
-            step is defined by the <em>conditional mutual information</em> between past states and outputs, given the input. Error accumulation is the <em>cumulative sum of errors</em> from all preceding AR steps.</li>
-          <li>The memory bottleneck is <strong>inevitable</strong> but can be <strong>monotonically</strong> reduced by incorporating more historical information into the denoising process.</li>
-          <li>The memory bottleneck can be mitigated by letting the <strong>denoising network</strong> take historical frames as inputs in a proper way.</li>
-          <li>The memory bottleneck and error accumulation are <strong>correlated</strong>. Less memory bottleneck error implies more error accumulation. </li>
-        </ul>
-      </div>
-    </div>
+    <!--/ Video Deamonstration -->
+    <br><br>
 
 
     <!-- Animation. -->
@@ -368,9 +368,6 @@
           </p>
           <img src="./static/images/networks.jpg" alt="network structure" width="1200">
         </div>
-
-   
-
       </div>
     </div>
     <!--/ Animation. -->
